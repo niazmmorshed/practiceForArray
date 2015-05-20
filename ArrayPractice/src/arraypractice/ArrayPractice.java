@@ -44,5 +44,41 @@ public class ArrayPractice {
 27.             + ",hireDay=" + e.getHireDay()); 
 28.       } 
     }
-    
+ class Employee 
+33. { 
+34.    public Employee(String n, double s, 
+35.       int year, int month, int day) 
+36.    { 
+37.       name = n; 
+38.       salary = s; 
+39.       GregorianCalendar calendar 
+40.          = new GregorianCalendar(year, month - 1, day); 
+41.          // GregorianCalendar uses 0 for January 
+42.       hireDay = calendar.getTime(); 
+43.    } 
+44. 
+45.    public String getName() 
+46.    { 
+47.       return name; 
+48.    } 
+49. 
+50.    public double getSalary() 
+51.    { 
+52.       return salary; 
+53.    } 
+54. 
+55.    public Date getHireDay() 
+56.    { 
+57.       return hireDay; 
+58.    } 
+59. 
+60.    public void raiseSalary(double byPercent) 
+61.    { 
+62.       double raise = salary * byPercent / 100; 
+63.       salary += raise; 
+64.    } 
+65. 
+66.    private String name; 
+67.    private double salary; 
+68.    private Date hireDay;    
 }
